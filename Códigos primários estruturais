@@ -1,0 +1,48 @@
+/*#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h> 
+
+int main(void)
+{
+//v_num é a variável que
+//será apontada pelo ponteiro
+int v_num = 10;
+
+//declaração de variável ponteiro
+int *ptr;
+
+//atribuindo o endereço da variável v_num ao ponteiro
+ptr = &v_num;
+
+printf("Utilizando ponteiros\n\n");
+printf("Conteúdo da variável v_num: %d\n", v_num);
+printf("Endereço da variável v_num: %x \n", &v_num);
+printf("Conteúdo da variável ponteiro ptr: %x", ptr);
+
+return(0);
+}
+*/
+
+// Exemplo - bem melhor expliciado - feito pelo Fábio, do canal Bóson Treinamentos //
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{
+  setlocale(LC_ALL, "Portuguese");
+
+  int *x, valor, y;
+  valor = 35;
+  x = &valor; //Atribuindo o endereço de 'valor' a x 
+  y = *x; //Atribuindo o conteúdo da variável apontada por x a y; 
+
+  printf("Endereço da variável comum: %p\n", &valor);
+  printf("Lendo o conteúdo do ponteiro x: %p\n", x);
+  printf("Endereço da variável ponteiro x: %p\n", &x);
+  printf("Conteúdo da variável apontada por x: %d\n", *x);
+  printf("Conteúdo da variável letra y: %d\n", y);
+
+  return (0);
+}
