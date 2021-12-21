@@ -1,2 +1,2 @@
 # Ponteiros
-Introdução ao de uso dos ponteiros 
+Introdução ao uso de ponteiros
