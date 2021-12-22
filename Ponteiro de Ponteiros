@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+int main(void)
+{
+  int x, *ptrx, **pptrx;
+  
+  //inicializando a variável com zero
+  x = 0;
+  printf("\nValor de x = %d\n", x);
+  printf("Endereço de x: %x\n\n", &x);
+  
+  
+  //Atribuindo os endereços aos ponteiros
+  ptrx = &x; // ptrx aponta para x, ou seja, o endereço de x está armazenado em ptrx
+  pptrx = &ptrx; // pptrx aponta para ptrx, ou seja, o endereço de ptrx, que por si é um ponteiro, está sendo atribuido ao pptrx, que é um ponteiro de ponteiros  
+    
+  *ptrx = *ptrx + 10;
+  printf("\nvalor de x = %d", x);
+  printf("\Endereço apontado por ptrx: %x\n",ptrx);
+  printf("Valor da variavel X que está sendo apontada por ptrx: %d\n",*ptrx);
+  printf("Endereço de memória da variável ptrx: %x\n",&ptrx); 
+ 
+  **pptrx = **pptrx + 10;
+  printf("\n\nvalor de x = %d", x);
+  printf("\nEndereco apontado por **pptrx: %x\n",pptrx);
+  printf("\nValor da variavel para a qual pptrx faz referencia: %d",**pptrx);
+  printf("\nEndereco de memoria da variavel **pptrx %x\n\n",&pptrx);
+  
+   
+  return 0;
+}
+/*int main(void)
+    {
+      //valor é a variável que
+      //será apontada pelo ponteiro
+      int valor = 27;
+      
+      //declaração de variável ponteiro
+      int *ptr;
+      
+      //atribuindo o endereço da variável 'valor' ao ponteiro
+      ptr = &valor;
+      
+      printf("Utilizando ponteiros\n\n");
+      printf ("Conteudo da variavel valor: %d\n", valor);
+      printf ("Endereço da variável valor: %x \n", &valor);
+      printf ("Conteúdo da variável 'valor' sendo invocado pelo ponteiro: %d", *ptr);
+     
+      return(0);
+    }
+*/
