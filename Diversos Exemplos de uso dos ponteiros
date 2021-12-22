@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/*int main(void) {
+  int v_num = 10;
+  int *ptr;
+  ptr = &v_num;
+  printf("Utilizando ponteiros\n\n");
+  printf("Conteúdo da variável v_num = %d\n", v_num);
+  printf("Endereço da variável v_num = %p\n", &v_num);
+  printf("Conteúdo da variável ponteiro prt = %p\n", ptr);
+  printf("\n");
+  return 0;
+}
+*/
+
+int main(void) {
+  int numero = 10;
+  int *ponteiro = &numero;
+  printf("Valor armazenado = %i\n", *ponteiro);
+  printf("Endereço de memória = %p\n", ponteiro);
+  printf("Endereço de memória (utilizando o &) = %p\n", &ponteiro);
+  return 0;
+
+}
+
+//O porcentagem x (%x) é usado ao retirar o número hexadecimal da conta. 
+/*
+int main(){
+  int x = 10;
+  int *ponteiro1 = &x;
+  int **ponteiro2 = &ponteiro1;
+  printf("\nO conteúdo em x = %d e o seu endereço, através de 'x', é %x", *ponteiro1, &ponteiro1);
+  printf("\n\nO endereço do ponteiro1 é = %x\nO endereço do ponteiro2 é = %x\n", *ponteiro1, &ponteiro2);
+  return 0;
+}
+*/
+/*
+//Código bem estrutura que será explicado detalhadamente ainda na aula de hoje
+int main(void){
+
+  int *p, j;
+  p = malloc(10*sizeof(int));
+  if (p == NULL){
+    printf("Espaço insuficiente");
+    exit(1);
+  } else {
+    printf("Primeiros dez números: \n");
+    for (j = 0; j < 10; j++) {
+      p[j] = j+10;
+      printf("%d=%d\n", j, p[j]);
+    }
+    p = realloc(p, 20*sizeof(int));
+  }
+  free(p);
+  return 0;
+}
+*/
